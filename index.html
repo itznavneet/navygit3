@@ -21,7 +21,7 @@
             display: flex;
             justify-content: center;
             /* align-content: center; */
-            margin: 34px 20%;
+            margin: 34px 15%;
             width: 65vw;
             height: 50vh;
             border: 2px solid aqua;
@@ -34,6 +34,12 @@
             font-size: larger;
             color: red;
         }
+
+    @media only screen and (max-width: 555px){
+        .box{
+           margin-right: 230px; 
+        }
+    }
     </style>
 </head>
 <body>
@@ -99,8 +105,9 @@ let arr=[
 ]
 
 let name= prompt("What is your good name")
-let ok= arr[Math.floor(Math.random()*100 + 1)]
-document.querySelector(".naam").innerHTML=  ` Here, is a joke  for you ${name} `
+let index=  Math.floor(Math.random()*50)
+let ok= arr[index]
+document.querySelector(".naam").innerHTML=  ` Here, is a joke  for you , ${name} `
 document.querySelector(".box").innerHTML=ok
 
     </script>
